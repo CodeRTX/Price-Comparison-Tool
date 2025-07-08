@@ -118,18 +118,18 @@ price_comparison_tool/
 │   ├── main.py                 # Flask application entry point
 │   ├── routes/
 │   │   ├── price_comparison.py # Price comparison API routes
-│   │   └── user.py            # User management routes
+│   │   └── user.py             # User management routes
 │   ├── services/
 │   │   ├── scraper_service.py  # Web scraping logic
 │   │   ├── llm_service.py      # AI/LLM integration
 │   │   └── cache_service.py    # Caching service
 │   ├── models/
-│   │   └── user.py            # Database models
+│   │   └── user.py             # Database models
 │   └── static/
-│       └── index.html         # Frontend interface
-├── venv/                      # Virtual environment
-├── requirements.txt           # Python dependencies
-└── README.md                 # This file
+│       └── index.html          # Frontend interface
+├── venv/                       # Virtual environment
+├── requirements.txt            # Python dependencies
+└── README.md                   # This file
 ```
 
 ## Configuration
@@ -188,4 +188,3 @@ This project is licensed under the MIT License.
 ## Support
 
 For issues and questions, please create an issue in the repository or contact the development team.
-
