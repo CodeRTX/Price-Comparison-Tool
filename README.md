@@ -183,7 +183,7 @@ The application is designed to be easily deployable on various platforms:
 
 ## License
 
-This project is licensed under the MIT License 2.0.
+This project is licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
 
 ## Support
 
