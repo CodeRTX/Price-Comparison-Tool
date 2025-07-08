@@ -183,8 +183,8 @@ The application is designed to be easily deployable on various platforms:
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License 2.0.
 
 ## Support
 
-For issues and questions, please create an issue in the repository or contact the development team.
+For issues and questions, please create an issue in the repository or contact me.
