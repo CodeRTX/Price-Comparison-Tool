@@ -1,5 +1,6 @@
 import os
 import sys
+
 # DON'T CHANGE THIS !!!
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
@@ -9,8 +10,27 @@ from src.routes.user import user_bp
 from src.routes.price_comparison import price_comparison_bp
 from flask_cors import CORS
 
+from pathlib import Path
+from dotenv import load_dotenv
+
+def generate_key(length_bytes: int = 24) -> str:
+    return os.urandom(length_bytes).hex()
+
+# Ensure '.env' exists and contains a 'SECRET_KEY'
+env_path = Path(__file__).parent.parent / ".env"
+if not env_path.exists():
+    env_path.write_text(f"SECRET_KEY={generate_key(24)}\n")
+else:
+    text = env_path.read_text()
+    if "SECRET_KEY=" not in text:
+        with env_path.open("a") as f:
+            f.write(f"SECRET_KEY={generate_key()}\n")
+
+# Load all vars from '.env' into `os.environ`
+load_dotenv(dotenv_path=env_path)
+
 app = Flask(__name__, static_folder=os.path.join(os.path.dirname(__file__), 'static'))
-app.config['SECRET_KEY'] = 'asdf#FGSgvasgf$5$WGT'
+app.config['SECRET_KEY'] = os.getenv("SECRET_KEY")
 
 # Enable CORS for all routes
 CORS(app)
